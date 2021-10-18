@@ -6,7 +6,7 @@
           <ul class='nav navbar-nav navbar-right'>
             <li><%=link_to "Home",root_path %></li>
             <li><%=link_to "About",about_path %></li>
-            <li><%=link_to "Contaxt",contact_path %></li>
+            <li><%=link_to "Contact",contact_path %></li>
             <li><%=link_to "Help",help_path%></li>
             <% if logged_in? %>
               <li><%=link_to current_user.email ,user_path(current_user) %></li>
