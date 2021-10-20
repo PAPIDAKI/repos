@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2021-10-20
+  in_number: MyString
+  code: 
+  name: MyString
+  afm: MyString
+  kgs: 1.5
+  value: 1.5
+
+two:
+  date: 2021-10-20
+  in_number: MyString
+  code: 
+  name: MyString
+  afm: MyString
+  kgs: 1.5
+  value: 1.5
