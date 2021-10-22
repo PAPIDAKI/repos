@@ -36,3 +36,5 @@ yarn-debug.log*
 
 /spring/*.pid
 /config/local_env.yml
+tags 
+gems.tags
