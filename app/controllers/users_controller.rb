@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :logged_in_user,only: [:edit,:update,:destroy,:index]
   before_action :correct_user, only: [:edit,:update]
   before_action :admin, only: [:destroy]
+
   def index 
     @users = User.paginate(page: params[:page]) 
   end
@@ -26,6 +27,7 @@ class UsersController < ApplicationController
       log_in @user
       flash[:success]="Welcome to the  Certifable repo"
       redirect_to  @user
+      @user.send_welcome_email
     else
       render 'new'
     end

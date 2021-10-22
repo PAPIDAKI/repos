@@ -1,12 +1,19 @@
 <h2>Dashboard</h2>
-Today :<%= @current_date %>
+<%=@current_date.to_formatted_s(:short) %>
+(new crop in <%= @till_new_crop.to_i %> days) 
+<br/>
+Last year sales :<%= number_to_human(@last_year_sales) %>
 </br>
-Last invoice : <%= @last_invoice %>
+Current year sales:<%= number_to_human(@current_year_sales) %>
 </br>
-Next 30 days sales forcast: <%= @next_30_forcast %>
-</br>
-Last year sales :<%= @last_year_sales %>
-</br>
-Current year sales:<%= @current_year_sales %>
-</br>
-New crop in <%= @till_new_crop.to_i %> days 
+Τελευταία Ενημέρωση:<%= @date_last_invoice.to_formatted_s(:long) %>
+<br/>
+<% @recent_invoices.each do |invoice|%>
+<section class='invoice_list'>
+  <%= invoice.date.to_formatted_s(:db)%>
+  <%= invoice.name%>
+  <%= invoice.kgs%>
+</section>
+<%end%>
+<br/>
+Next 30 days sales forcast: <%= number_to_human(@next_30_forcast) %>

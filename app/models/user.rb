@@ -46,5 +46,9 @@ class User < ApplicationRecord
     return false if remember_digest.nil?
     BCrypt::Password.new(rember_digest).is_password?(remember_token)
   end
+
+  def send_email
+    User.mailer.welcome_email(self).deliver_now
+  end
 end
 

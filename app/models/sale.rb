@@ -2,13 +2,13 @@ class Sale < ApplicationRecord
   
   #product
   scope :raisins,->{where(code: ['1011','1014']) }
-  scope :raisin_imports,->{where("afm LIKE ?",'999999999%') }
-  scope :raisin_buys,->{where(code:['2012','2022'])} 
+  #scope :raisin_imports,->{where("afm LIKE ?",'999999999%') }
+  #scope :raisin_buys,->{where(code:['2012','2022'])} 
 
-  scope :grape_sales,->{where(code: ['1012','1015','1042'])}
-  scope :grape_x,->{where(code:['3023'])}
+  #scope :grape_sales,->{where(code: ['1012','1015','1042'])}
+  #scope :grape_x,->{where(code:['3023'])}
   scope :raisins_x,->{where(code:['3021'])}
-  # fason  rents 
+  # rents 
 
 
   #time range
